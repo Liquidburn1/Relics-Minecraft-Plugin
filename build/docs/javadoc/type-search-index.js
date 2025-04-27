@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"liquidburn1.relicsPlugin","l":"GiveRelicCommand"},{"p":"liquidburn1.relicsPlugin","l":"RelicsPlugin"}];updateSearchResults();
