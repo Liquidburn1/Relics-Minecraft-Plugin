@@ -35,10 +35,10 @@ public class RelicCrafting {
         NamespacedKey recipeKey = new NamespacedKey(plugin, "Crafting/archaic_craft");
 
         ShapedRecipe relicRecipe = new ShapedRecipe(recipeKey, outputRelic);
-        relicRecipe.shape("FFF", "FGF", "FFF");
+        relicRecipe.shape("FFF", "FLF", "FFF");
 
         relicRecipe.setIngredient('F', new RecipeChoice.ExactChoice(ArchaicShard)); // Only your exact fragment will work
-        relicRecipe.setIngredient('G', Material.GOLD_BLOCK); // Gold block
+        relicRecipe.setIngredient('L', Material.LAPIS_BLOCK); // Lapis Block
 
         return relicRecipe;
 
@@ -53,10 +53,10 @@ public class RelicCrafting {
         NamespacedKey recipeKey = new NamespacedKey(plugin, "Crafting/archaic_craft_relic");
 
         ShapedRecipe relicRecipe = new ShapedRecipe(recipeKey, outputRelic);
-        relicRecipe.shape("FFF", "FGF", "FFF");
+        relicRecipe.shape("FFF", "FDF", "FFF");
 
         relicRecipe.setIngredient('F', new RecipeChoice.ExactChoice(Relic)); // Only your exact fragment will work
-        relicRecipe.setIngredient('G', Material.DIAMOND_BLOCK); // Gold block
+        relicRecipe.setIngredient('D', Material.DIAMOND_BLOCK); // Gold block
 
         return relicRecipe;
 

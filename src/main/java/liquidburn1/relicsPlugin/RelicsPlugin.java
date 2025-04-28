@@ -3,7 +3,11 @@ import liquidburn1.relicsPlugin.Commands.RegisterAllCommands;
 import liquidburn1.relicsPlugin.Crafting.RegisterRecipes;
 import liquidburn1.relicsPlugin.Items.Effects.Relicpotioneffects;
 import liquidburn1.relicsPlugin.Listeners.ListenerRegister;
+import liquidburn1.relicsPlugin.Listeners.RelicLootRegistry.RelicLootRegistry;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Random;
+import java.util.UUID;
 
 
 public final class RelicsPlugin extends JavaPlugin {
@@ -11,6 +15,9 @@ public final class RelicsPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("RelicsPlugin has started");
+
+        //Register all Relics
+        RelicLootRegistry.registerRelics();
 
         //Regisers Commands
         RegisterAllCommands Commands = new RegisterAllCommands();

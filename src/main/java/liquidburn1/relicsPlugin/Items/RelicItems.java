@@ -25,11 +25,6 @@ public class RelicItems {
 //        meta.getPersistentDataContainer().set(unplaceableKey, PersistentDataType.BYTE, (byte)1);
 
 
-
-
-
-
-
     //Relic Fragment
     public static ItemStack RelicFragment()
     {
