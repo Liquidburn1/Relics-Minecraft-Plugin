@@ -18,18 +18,22 @@ public class RelicBlueprint {
     public RandomRange attackDamage;
     public RandomRange attackSpeed;
     public RandomRange movementSpeed;
-    public RandomRange knockbackResistance;
+
     public EquipmentSlotGroup equipmentSlot;
-    public Map<Enchantment, Integer> enchants;
+    public Map<Enchantment, RandomRange> enchants;
+    public String potioneffects;
     public boolean hideEnchants;
+    public boolean ischarm;
+    public boolean charmable;
+    public String extratag;
 
     // Constructor
     public RelicBlueprint(Material material, String displayName, List<String> lore,
                           RandomRange healthBoost, RandomRange armorToughness, RandomRange armor,
                           RandomRange attackDamage, RandomRange attackSpeed, RandomRange movementSpeed,
-                          RandomRange knockbackResistance, EquipmentSlotGroup equipmentSlot,
-                          Map<Enchantment, Integer> enchants,
-                          boolean hideEnchants) {
+                           EquipmentSlotGroup equipmentSlot,
+                          Map<Enchantment, RandomRange> enchants,String potioneffects,
+                          boolean hideEnchants,boolean ischarm,boolean charmable,String extratag) {
         this.material = material;
         this.displayName = displayName;
         this.lore = lore;
@@ -39,10 +43,13 @@ public class RelicBlueprint {
         this.attackDamage = attackDamage;
         this.attackSpeed = attackSpeed;
         this.movementSpeed = movementSpeed;
-        this.knockbackResistance = knockbackResistance;
         this.equipmentSlot = equipmentSlot;
         this.enchants = enchants;
+        this.potioneffects=potioneffects;
         this.hideEnchants = hideEnchants;
+        this.ischarm = ischarm;
+        this.charmable = charmable;
+        this.extratag = extratag;
 
     }
 }

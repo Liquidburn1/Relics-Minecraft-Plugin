@@ -13,13 +13,14 @@ public class RegisterRecipes {
         CraftingRecipe relicRecipe = RelicCrafting.registerRelicCrafting(plugin);
         CraftingRecipe ArchaicRecipe = RelicCrafting.registerArchaicCrafting(plugin);
         CraftingRecipe ArchaicRecipewithRelics = RelicCrafting.registerArchaicCrafting2(plugin);
-
+        CraftingRecipe RelicChisel = RelicCrafting.registerChiselCrafting(plugin);
 
 
 
         Bukkit.addRecipe(relicRecipe);
         Bukkit.addRecipe(ArchaicRecipe);
         Bukkit.addRecipe(ArchaicRecipewithRelics);
+        Bukkit.addRecipe(RelicChisel);
     }
 
 

@@ -5,7 +5,7 @@ import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import io.papermc.paper.command.brigadier.CommandSourceStack;
 import io.papermc.paper.command.brigadier.Commands;
 
-import liquidburn1.relicsPlugin.Items.RelicItems;
+import liquidburn1.relicsPlugin.Items.RelicItems.RelicItems;
 
 import org.bukkit.command.CommandSender;
 
@@ -138,6 +138,37 @@ public class GiveRelicCommand {
 
 
                                 player.getInventory().addItem(RelicItems.ArchaicRelic());
+                                return Command.SINGLE_SUCCESS;
+                            }
+
+
+
+                            player.sendPlainMessage("Gave a relic");
+                            return Command.SINGLE_SUCCESS;
+
+
+
+                        })).then(Commands.literal("Charmer")
+                        .executes(ctx->{
+
+                            CommandSender sender = ctx.getSource().getSender();
+                            Entity executor = ctx.getSource().getExecutor();
+
+                            if (!(executor instanceof Player player)) {
+
+                                sender.sendPlainMessage("Only players can get relics!");
+                                return Command.SINGLE_SUCCESS;
+                            }
+
+
+
+                            if (sender == executor) {
+
+                                player.sendPlainMessage("Almost got a relic");
+
+
+
+                                player.getInventory().addItem(RelicItems.CharmSocketRod());
                                 return Command.SINGLE_SUCCESS;
                             }
 

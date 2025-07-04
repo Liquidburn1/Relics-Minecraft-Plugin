@@ -13,7 +13,7 @@ public class RandomRange {
         this.max = max;
     }
 
-    // Returns a random double between min and max
+
     public double getRandom() {
         if (min == max) {
             return min;
@@ -21,7 +21,7 @@ public class RandomRange {
         return ThreadLocalRandom.current().nextDouble(min, max);
     }
 
-    // Returns a random int between min and max (useful if needed)
+
     public int getRandomInt() {
         if (min == max) {
             return (int) min;
