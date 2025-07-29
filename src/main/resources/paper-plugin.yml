@@ -3,4 +3,4 @@ version: '1.0'
 main: liquidburn1.relicsPlugin.RelicsPlugin
 api-version: '1.21'
 authors: [ Liquidburn ]
-description: This allows users in a server to get weapons/armor by crafting relics
+description: This allows users in a server to get custom weapons/armor by crafting relics

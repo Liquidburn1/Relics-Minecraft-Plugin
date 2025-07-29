@@ -18,7 +18,7 @@ public final class RelicsPlugin extends JavaPlugin {
         RelicLootRegistry.registerRelics();
         RelicLootRegistry.registerArchaic();
 
-        //Regisers Commands
+        //Registers Commands
         RegisterAllCommands Commands = new RegisterAllCommands();
         Commands.registerCommands(this);
 

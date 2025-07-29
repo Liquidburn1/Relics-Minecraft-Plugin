@@ -3,23 +3,19 @@ package liquidburn1.relicsPlugin.Listeners.RelicItemAbilities;
 import com.destroystokyo.paper.event.player.PlayerArmorChangeEvent;
 import liquidburn1.relicsPlugin.RelicsPlugin;
 import org.bukkit.*;
-import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.damage.DamageSource;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.*;
-import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.components.UseCooldownComponent;
 import org.bukkit.persistence.PersistentDataType;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Random;
-import java.util.function.Consumer;
 
 /**This file contains the custom enchants so relics can have different abilities */
 public class CustomEnchantsListener implements Listener {
@@ -78,7 +74,7 @@ public class CustomEnchantsListener implements Listener {
             ItemMeta meta = item.getItemMeta();
 
 
-            //Lightening
+            //Lightening 30% chance of it working
             if(random.nextDouble() <= 0.3) {
              NamespacedKey relicKey = new NamespacedKey(RelicsPlugin.getPlugin(RelicsPlugin.class), "Lightening");
             if (meta.getPersistentDataContainer().has(relicKey, PersistentDataType.STRING)) {
@@ -89,6 +85,7 @@ public class CustomEnchantsListener implements Listener {
 
 
     }
+
 
 
 
@@ -110,8 +107,8 @@ public class CustomEnchantsListener implements Listener {
         NamespacedKey explode = new NamespacedKey(RelicsPlugin.getPlugin(RelicsPlugin.class),"explode");
         if(bow.getItemMeta().getPersistentDataContainer().has(explode,PersistentDataType.STRING))
         {
-
-            player.getWorld().createExplosion(arrow.getLocation(),3F);
+            player.getWorld().spawnParticle(Particle.DRAGON_BREATH,arrow.getLocation(),100);
+            player.getWorld().createExplosion(arrow.getLocation(),2F);
         }
 
 

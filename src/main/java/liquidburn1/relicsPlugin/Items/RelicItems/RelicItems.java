@@ -133,5 +133,28 @@ public class RelicItems {
     }
 
 
+    public static ItemStack Void_Arrow() {
+
+
+        ItemStack item = new ItemStack(Material.SPECTRAL_ARROW);
+        ItemMeta meta = item.getItemMeta();
+
+        meta.setDisplayName("Void Arrow");
+
+        meta.setLore(List.of(
+                "§7Used to embed Charms into Relics.",
+                "",
+                "§f* Right-click a Relic",
+                "§fwhile holding this Chisel",
+                "§fin your inventory."
+        ));
+
+        meta.addEnchant(Enchantment.PROTECTION, 1, true);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        item.setItemMeta(meta);
+
+        return item;
+    }
+
 
 }

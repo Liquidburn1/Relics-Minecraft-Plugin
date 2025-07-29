@@ -125,7 +125,7 @@ public class GiveRelicCommand {
 
                             if (!(executor instanceof Player player)) {
 
-                                sender.sendPlainMessage("Only players can get relics!");
+
                                 return Command.SINGLE_SUCCESS;
                             }
 
@@ -133,7 +133,7 @@ public class GiveRelicCommand {
 
                             if (sender == executor) {
 
-                                player.sendPlainMessage("Almost got a relic");
+
 
 
 
@@ -143,7 +143,7 @@ public class GiveRelicCommand {
 
 
 
-                            player.sendPlainMessage("Gave a relic");
+
                             return Command.SINGLE_SUCCESS;
 
 
@@ -156,7 +156,7 @@ public class GiveRelicCommand {
 
                             if (!(executor instanceof Player player)) {
 
-                                sender.sendPlainMessage("Only players can get relics!");
+
                                 return Command.SINGLE_SUCCESS;
                             }
 
@@ -174,7 +174,7 @@ public class GiveRelicCommand {
 
 
 
-                            player.sendPlainMessage("Gave a relic");
+
                             return Command.SINGLE_SUCCESS;
 
 
