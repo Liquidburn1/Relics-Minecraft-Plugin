@@ -12,33 +12,4 @@ Weak mobs will now have a chance to drop relic fragments, and upon collecting 8 
 A Relic is an item which holds a bunch of weapons and armor, and on right click you will open a relic. 
 
 
----
-
-## ✨ Features
-
-- 💎 Custom **Relic Items** with fancy gradient-colored names and enchants and Attributes and potion effects
-- 🎨 **Relic Fragments** that can be crafted into full relics
-- ⚡ Each **Relic** gives **unique Potion Effects** when held
-- 🛡️ Relics can boost player **attributes** (e.g., +Max Health)
-- 🛠️ Fully extendable to add more relics easily
-
----
-
-## 🏗 Project Structure
-
-```plaintext
-liquidburn1.relicsPlugin
-├── RelicsPlugin.java             # Main plugin class
-├── Items/
-│   └── RelicItems.java            # Defines both relics and fragments
-│   └── RelicLoot/                 # Defines all the relicitems that can be given from a relic
-│       └── Axes/     
-│    └── ArchaicLoot/              # Defines all the Archaic Items that can be given from a relic
-│       └── Axes/                 
-│   └──Effects/
-│       └── RelicEffectRegistry.java   # Maps all the relic names with a List of their potion effects
-│        └── Relicpotioneffects.java   # Has the logic to go over the 6 Equipment slots for each player ever 7secs to give pot effects
-├── Commands/
-│   └── RelicCommandRegistrar.java # /giverelicitem command registration
-├── Listeners/
-│   └── RelicEffectListener.java   # Scheduled task to check and apply relic effects
+All the Documentation for this Plugin can be found at https://liquid-mc.netlify.app/
